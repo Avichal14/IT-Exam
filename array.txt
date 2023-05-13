@@ -1,0 +1,23 @@
+In PHP, an array iterator is an object that allows you to iterate over the elements of an array. You can use the ArrayIterator class to create an iterator object for an array.
+
+Here's an example PHP script that demonstrates how to use an array iterator:
+<?php
+$fruits = array('apple', 'banana', 'cherry', 'date');
+
+// create an iterator object for the fruits array
+$iterator = new ArrayIterator($fruits);
+
+// iterate over the elements of the array using the iterator
+while($iterator->valid()) {
+    echo $iterator->current() . "\n";
+    $iterator->next();
+}
+?>
+
+In this example, we first define an array called $fruits 
+that contains four elements. We then create an iterator object
+ for the array using the ArrayIterator class. We use a while loop to 
+ iterate over the elements of the array, using the valid() method to check 
+ if the iterator has reached the end of the array, and the current() method 
+ to get the current element of the array. We then use the next() method to move
+  the iterator to the next element of the array.
